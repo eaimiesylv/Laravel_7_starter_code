@@ -1,1 +1,2 @@
 "# election" 
+Docker set up

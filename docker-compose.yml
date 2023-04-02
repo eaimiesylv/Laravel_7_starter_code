@@ -24,8 +24,7 @@ services:
       - ./mysql_data3:/var/lib/mysql
       #- ./db:/docker-entrypoint-initdb.d
     environment:
-      # MYSQL_ROOT_PASSWORD: notSecureChangeMe
-      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
 
     networks:
       - election
