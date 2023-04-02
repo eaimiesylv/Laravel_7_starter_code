@@ -1,0 +1,12 @@
+The folder containing the laravel project is blog.inside apache public folder.
+
+
+Error. I  forbidden error
+Solution: I copied all the content of the public folder from the blog which is a laravel project,(Note cut or deleting the public folder was generating an error) to the root of apache public folder. In this case it was var/www/html/public/ then I open the index file and change this line to include the
+folder part
+$app = require_once __DIR__.'/blog/bootstrap/app.php';
+require __DIR__.'/blog/vendor/autoload.php';
+
+*******This code was run to remove the permission error
+chmod -Rf 0777 /var/www/html/public/blog/bootstrap/cache
+chmod -Rf 0777 /var/www/html/public/blog/storage
